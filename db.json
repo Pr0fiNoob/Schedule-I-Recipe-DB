@@ -23,5 +23,10 @@
         "ingredients": "Sour Diesel\nParacetamol (white pills)",
         "instructions": "Sour Diesel + Paracetamol = Ultra Slime\n\nAdditional notes:\nsneaky",
         "id": "f4f4b237b02cc0c32c83c52a12e3fa02d0324fe28fb393d8f6d8f4dc2a4becfb"
+    },
+    "Stinky Cake": {
+        "ingredients": "Sour Diesel\nParacetamol\nGasoline",
+        "instructions": "Sour Diesel + Paracetamol = Ultra Slime\nUltra Slime + Gasoline = Stinky Cake\n\nAdditional notes:\nvery addictive (95%)",
+        "id": "3040234ac2140100655da62102a8d09f03a1b0b5a4bdc5ae4cba8c4356d0f808"
     }
 }
