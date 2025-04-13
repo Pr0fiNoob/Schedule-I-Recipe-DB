@@ -1,12 +1,158 @@
 from tkinter import *
+import hashlib
+import json
+
+# Open Database
+with open("db.json", "r") as file:
+    data = json.load(file)
+    file.close()
+
+# Check if the database is corrupted or modified
+files_corrupted = False
+for recipe in data:
+    check_data = recipe + data[recipe]["ingredients"] + data[recipe]["instructions"]
+    if hashlib.sha256(check_data.encode()).hexdigest() != data[recipe]["id"]:
+        print(f"Recipe '{recipe}' has been modified or is corrupted. Please check the database.")
+        files_corrupted = True
+
+def show_recipe_list():
+    def search_recipes():
+        search_query = search_entry.get().lower()
+        for widget in scrollable_frame.winfo_children():
+            widget.destroy()
+        for recipe_name, recipe in data.items():
+            if search_query in recipe_name.lower():
+                add_recipe_to_frame(recipe_name, recipe)
+
+    def add_recipe_to_frame(recipe_name, recipe):
+        recipe_frame = Frame(scrollable_frame, borderwidth=2, relief="solid", padx=5, pady=5)
+        recipe_frame.pack(pady=5, fill=X, expand=True)
+
+        recipe_label = Label(recipe_frame, text=recipe_name, font=("Arial", 12, "bold"))
+        recipe_label.pack(anchor="w")
+
+        ingredients_label = Label(recipe_frame, text="Ingredients:", font=("Arial", 10, "italic"))
+        ingredients_label.pack(anchor="w")
+        ingredients_text = Text(recipe_frame, height=5, width=40, wrap=WORD)
+        ingredients_text.insert(END, recipe["ingredients"])
+        ingredients_text.config(state=DISABLED)
+        ingredients_text.pack()
+
+        instructions_label = Label(recipe_frame, text="Instructions:", font=("Arial", 10, "italic"))
+        instructions_label.pack(anchor="w")
+        instructions_text = Text(recipe_frame, height=5, width=40, wrap=WORD)
+        instructions_text.insert(END, recipe["instructions"])
+        instructions_text.config(state=DISABLED)
+        instructions_text.pack()
+
+    recipe_window = Toplevel(root)
+    recipe_window.title("Recipe List")
+    recipe_window.geometry("400x450")
+
+    # Add a search bar
+    search_frame = Frame(recipe_window)
+    search_frame.pack(fill=X, padx=10, pady=5)
+    search_label = Label(search_frame, text="Search:", font=("Arial", 10))
+    search_label.pack(side=LEFT, padx=5)
+    search_entry = Entry(search_frame, font=("Arial", 10))
+    search_entry.pack(side=LEFT, fill=X, expand=True, padx=5)
+    search_button = Button(search_frame, text="Search", command=search_recipes)
+    search_button.pack(side=LEFT, padx=5)
+
+    # Create a canvas and a scrollbar
+    canvas = Canvas(recipe_window)
+    scrollbar = Scrollbar(recipe_window, orient=VERTICAL, command=canvas.yview)
+    scrollable_frame = Frame(canvas)
+
+    # Configure the canvas
+    scrollable_frame.bind(
+        "<Configure>",
+        lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
+    )
+    canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
+    canvas.configure(yscrollcommand=scrollbar.set)
+
+    # Pack the canvas and scrollbar
+    canvas.pack(side=LEFT, fill=BOTH, expand=True)
+    scrollbar.pack(side=RIGHT, fill=Y)
+
+    # Add recipes to the scrollable frame
+    for recipe_name, recipe in data.items():
+        add_recipe_to_frame(recipe_name, recipe)
+
+def create_recipe():
+    recipe_window = Toplevel(root)
+    recipe_window.title("Create Recipe")
+    recipe_window.geometry("400x450")
+
+    name_label = Label(recipe_window, text="Recipe Name")
+    name_entry = Entry(recipe_window)
+
+    ingredients_label = Label(recipe_window, text="Ingredients")
+    ingredients_entry = Text(recipe_window, height=10, width=40)
+
+    instructions_label = Label(recipe_window, text="Instructions")
+    instructions_entry = Text(recipe_window, height=10, width=40)
+
+    save_button = Button(recipe_window, text="Save Recipe", command=lambda: save_recipe(name_entry.get(), ingredients_entry.get("1.0", END), instructions_entry.get("1.0", END)))
+
+    name_label.pack()
+    name_entry.pack()
+    ingredients_label.pack()
+    ingredients_entry.pack()
+    instructions_label.pack()
+    instructions_entry.pack()
+    save_button.pack()
+
+def save_recipe(name, ingredients, instructions):
+    if not name or not ingredients or not instructions:
+        return
+
+    # Hash the recipe name to create a unique ID
+    check_data = name + ingredients + instructions
+    recipe_id = hashlib.sha256(check_data.encode()).hexdigest()
+
+    recipe = {
+        "ingredients": ingredients.strip(),
+        "instructions": instructions.strip(),
+        "id": recipe_id
+
+    }
+
+    # Save the recipe to a JSON file
+    data[f"{name}"] = recipe
+    with open("db.json", "w") as file:
+        json.dump(data, file, indent=4)
+        file.close()
+    print(data)
+
+    print(f"Recipe '{name}' saved with ID: {recipe_id}")
+
 
 root = Tk()
 
-root.geometry("600x600")
+icon = PhotoImage(file="icon.png")
+root.iconphoto(True, icon)
+root.geometry("600x400")
 root.title("Schedule I Recipe DB")
 
-label = Label(root, text="Schedule  Recipe DB", font=("Arial", 24))
-label.pack()
+
+title = Label(root, text="Schedule  Recipe DB", font=("Arial", 24, "underline"))
+recipe_list_btn = Button(root, text="Recipe List", font=("Arial", 16), width=20, height=2)
+create_recipe_btn = Button(root, text="Create Recipe", font=("Arial", 16), width=20, height=2)
+
+title.pack()
+
+if files_corrupted:
+    corrupted_label = Label(root, text="WARNING: Some recipes might be corrupted or have been modified without authorization.\nPlease download the newest version of the database.\nIf the problem persists, please contact the developer.\n(check console for more information)", fg="red" , font=("Arial", 10, "bold"))
+    corrupted_label.pack()
+
+recipe_list_btn.pack(pady=10)
+create_recipe_btn.pack(pady=10)
+recipe_list_btn.config(command=show_recipe_list)
+create_recipe_btn.config(command=create_recipe)
+
 
 
 root.mainloop()
+
