@@ -10,8 +10,7 @@ with open("db.json", "r") as file:
 # Check if the database is corrupted or modified
 files_corrupted = False
 for recipe in data:
-    check_data = recipe + data[recipe]["ingredients"] + data[recipe]["instructions"]
-    if hashlib.sha256(check_data.encode()).hexdigest() != data[recipe]["id"]:
+    if hashlib.sha256(recipe.encode()).hexdigest() != data[recipe]["id"]:
         print(f"Recipe '{recipe}' has been modified or is corrupted. Please check the database.")
         files_corrupted = True
 
@@ -81,6 +80,14 @@ def show_recipe_list():
         add_recipe_to_frame(recipe_name, recipe)
 
 def create_recipe():
+
+    def save_and_close():
+        name = name_entry.get()
+        ingredients = ingredients_entry.get("1.0", END)
+        instructions = instructions_entry.get("1.0", END)
+        save_recipe(name, ingredients, instructions)
+        recipe_window.destroy()
+
     recipe_window = Toplevel(root)
     recipe_window.title("Create Recipe")
     recipe_window.geometry("400x450")
@@ -94,7 +101,7 @@ def create_recipe():
     instructions_label = Label(recipe_window, text="Instructions")
     instructions_entry = Text(recipe_window, height=10, width=40)
 
-    save_button = Button(recipe_window, text="Save Recipe", command=lambda: save_recipe(name_entry.get(), ingredients_entry.get("1.0", END), instructions_entry.get("1.0", END)))
+    save_button = Button(recipe_window, text="Save Recipe", command=save_and_close)
 
     name_label.pack()
     name_entry.pack()
@@ -104,19 +111,18 @@ def create_recipe():
     instructions_entry.pack()
     save_button.pack()
 
+
 def save_recipe(name, ingredients, instructions):
     if not name or not ingredients or not instructions:
         return
 
     # Hash the recipe name to create a unique ID
-    check_data = name + ingredients + instructions
-    recipe_id = hashlib.sha256(check_data.encode()).hexdigest()
+    recipe_id = hashlib.sha256(name.encode()).hexdigest()
 
     recipe = {
         "ingredients": ingredients.strip(),
         "instructions": instructions.strip(),
         "id": recipe_id
-
     }
 
     # Save the recipe to a JSON file
@@ -124,7 +130,6 @@ def save_recipe(name, ingredients, instructions):
     with open("db.json", "w") as file:
         json.dump(data, file, indent=4)
         file.close()
-    print(data)
 
     print(f"Recipe '{name}' saved with ID: {recipe_id}")
 
