@@ -15,6 +15,11 @@ for recipe in data:
         files_corrupted = True
 
 def show_recipe_list():
+    # read database again to ensure we have the latest version
+    with open("db.json", "r") as file:
+        data = json.load(file)
+        file.close()
+
     def search_recipes():
         search_query = search_entry.get().lower()
         for widget in scrollable_frame.winfo_children():
