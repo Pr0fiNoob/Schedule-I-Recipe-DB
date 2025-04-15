@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox
 import hashlib
 import json
 
@@ -13,6 +14,68 @@ for recipe in data:
     if hashlib.sha256(recipe.encode()).hexdigest() != data[recipe]["id"]:
         print(f"Recipe '{recipe}' has been modified or is corrupted. Please check the database.")
         files_corrupted = True
+
+def edit_recipe(recipe_name):
+    def save_and_close():
+        ingredients = ingredients_entry.get("1.0", END)
+        instructions = instructions_entry.get("1.0", END)
+        effects = effects_entry.get("1.0", END)
+        notes = notes_entry.get("1.0", END)
+        save_recipe(recipe_name, ingredients, instructions, effects, notes)
+        edit_window.destroy()
+
+    edit_window = Toplevel(root)
+    edit_window.title(f"Edit Recipe - {recipe_name}")
+    edit_window.geometry("900x500")
+
+    # Create main content frame for two columns
+    content_frame = Frame(edit_window)
+    content_frame.pack(fill=BOTH, expand=True, padx=10)
+
+    # Left column
+    left_frame = Frame(content_frame)
+    left_frame.pack(side=LEFT, fill=BOTH, expand=True, padx=5)
+    
+    ingredients_label = Label(left_frame, text="Ingredients")
+    ingredients_label.pack()
+    ingredients_entry = Text(left_frame, height=10, width=40)
+    ingredients_entry.insert(END, data[recipe_name]["ingredients"])
+    ingredients_entry.pack(fill=BOTH, expand=True)
+
+    instructions_label = Label(left_frame, text="Instructions")
+    instructions_label.pack()
+    instructions_entry = Text(left_frame, height=10, width=40)
+    instructions_entry.insert(END, data[recipe_name]["instructions"])
+    instructions_entry.pack(fill=BOTH, expand=True)
+
+    # Right column
+    right_frame = Frame(content_frame)
+    right_frame.pack(side=LEFT, fill=BOTH, expand=True, padx=5)
+
+    effects_label = Label(right_frame, text="Effects")
+    effects_label.pack()
+    effects_entry = Text(right_frame, height=10, width=20)
+    effects_entry.insert(END, data[recipe_name].get("effects", ""))
+    effects_entry.pack(fill=BOTH, expand=True)
+
+    notes_label = Label(right_frame, text="Notes")
+    notes_label.pack()
+    notes_entry = Text(right_frame, height=10, width=20)
+    notes_entry.insert(END, data[recipe_name].get("notes", ""))
+    notes_entry.pack(fill=BOTH, expand=True)
+
+    # Save button at bottom
+    save_button = Button(edit_window, text="Save Changes", command=save_and_close)
+    save_button.pack(pady=10)
+
+def delete_recipe(recipe_name, recipe_frame):
+    from tkinter import messagebox
+    if messagebox.askyesno("Confirm Delete", f"Are you sure you want to delete '{recipe_name}'?"):
+        del data[recipe_name]
+        with open("db.json", "w") as file:
+            json.dump(data, file, indent=4)
+        recipe_frame.destroy()
+        messagebox.showinfo("Deleted successfully", f"Recipe '{recipe_name}' has been deleted.")
 
 def show_recipe_list():
     # read database again to ensure we have the latest version
@@ -32,13 +95,34 @@ def show_recipe_list():
         recipe_frame = Frame(scrollable_frame, borderwidth=2, relief="solid", padx=5, pady=5)
         recipe_frame.pack(pady=5, fill=X, expand=True)
 
-        recipe_label = Label(recipe_frame, text=recipe_name, font=("Arial", 12, "bold"))
-        recipe_label.pack(anchor="w")
+        # Top row with recipe name and buttons
+        top_frame = Frame(recipe_frame)
+        top_frame.pack(fill=X, padx=5, pady=5)
 
-        # Create container frames for side-by-side layout
-        left_frame = Frame(recipe_frame)
+        recipe_label = Label(top_frame, text=recipe_name, font=("Arial", 12, "bold"))
+        recipe_label.pack(side=LEFT)
+
+        # Add buttons frame
+        buttons_frame = Frame(top_frame)
+        buttons_frame.pack(side=RIGHT)
+
+        edit_button = Button(buttons_frame, text="Edit", command=lambda: edit_recipe(recipe_name))
+        edit_button.pack(side=LEFT, padx=2)
+
+        delete_button = Button(buttons_frame, text="Delete", 
+                            command=lambda: delete_recipe(recipe_name, recipe_frame))
+        delete_button.pack(side=LEFT, padx=2)
+
+        # Create content frame for two columns
+        content_frame = Frame(recipe_frame)
+        content_frame.pack(fill=BOTH, expand=True, padx=5)
+
+        # Create left column frame
+        left_frame = Frame(content_frame)
         left_frame.pack(side=LEFT, fill=BOTH, expand=True, padx=5)
-        right_frame = Frame(recipe_frame)
+
+        # Create right column frame
+        right_frame = Frame(content_frame)
         right_frame.pack(side=LEFT, fill=BOTH, expand=True, padx=5)
 
         # Left column - Ingredients and Instructions
