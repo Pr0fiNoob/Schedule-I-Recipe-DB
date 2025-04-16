@@ -12,9 +12,9 @@ with open("db.json", "r") as file:
 files_corrupted = False
 for recipe_name in data:
     recipe = data[recipe_name]
-    recipe_content = f"{recipe_name}{recipe['ingredients']}{recipe['instructions']}{recipe.get('effects')}{recipe.get('notes')}".encode()
+    recipe_content = f"{recipe_name}{recipe['ingredients']}{recipe['instructions']}{recipe['effects']}{recipe['notes']}".encode()
     if hashlib.sha512(recipe_content).hexdigest() != recipe["id"]:
-        print(f"Recipe '{recipe_name}' has been modified or is corrupted. Please check the database.")
+        print(f"Recipe '{recipe_name}' has been modified or is corrupted. ID: {recipe['id']}, Expected: {hashlib.sha512(recipe_content).hexdigest()}")
         files_corrupted = True
 
 def edit_recipe(recipe_name):
@@ -255,7 +255,7 @@ def save_recipe(name, ingredients, instructions, effects, notes):
         return
 
     # Combine all recipe content for hashing
-    recipe_content = f"{name}{ingredients}{instructions}{effects}{notes}".encode()
+    recipe_content = f"{name.strip()}{ingredients.strip()}{instructions.strip()}{effects.strip()}{notes.strip()}".encode()
     # Create SHA-512 hash of the entire recipe content
     recipe_id = hashlib.sha512(recipe_content).hexdigest()
 
