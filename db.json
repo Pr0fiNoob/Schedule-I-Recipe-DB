@@ -2,92 +2,120 @@
     "Big Cock": {
         "ingredients": "Og kush\nBanana",
         "instructions": "Og kush + Banana = Big Cock",
-        "id": "148666e33f757c54006705a765ede50b6bbfcbddc8150abe1672f668601bf73d"
+        "effects": "",
+        "notes": "",
+        "id": "8ee562d7e712205fcd145838cd484c7058f04ebc3f1203d01ce36c607433f5ea259066ff5c157cedbeed64cd7ab0d856232b6f4620c43af2c6762314467e0b57"
     },
     "Aspen Death": {
         "ingredients": "Og kush\nviagra (blue pills)",
         "instructions": "Og Kush + Vigra = Aspen Death\n\nAdditional note:\nca. 85% addictive",
-        "id": "8a2ff33dcb3dafd47dbbc46f4e99221557a4c13bd11abae9ce98292bb63c588d"
+        "effects": "",
+        "notes": "",
+        "id": "193bcd2dda29c6d76aa5f3ee99f075856a115a7871862b560ff0459bbc81753575a31c29df67b48fc3ce6b8b38c381f449bab5e75204f35702db252d99136598"
     },
     "Bio Balls": {
         "ingredients": "Og kush\nBanana",
         "instructions": "Og Kush + Banana = Bio Balls\n\nAdditional note:\nsneaky. sonst shit",
-        "id": "7204703dd27ddaa06cde360c1df44672f7c23f96dd8d841927b0cb90ecd738bf"
+        "effects": "",
+        "notes": "",
+        "id": "4f71e3035493908f3be3b8259d0116937adda52c734a46088090ea3cb853e005d13721748057b92ec6363f8ed388c836340f9cf08ac50c7c61087885cb76bbf8"
     },
     "Banana Cock ": {
         "ingredients": "Og Kush\nViagra\nBanana",
         "instructions": "Og Kush + Viagra = Aspen Death\nAspen Death + Banana = Banana Cock\n\nAdditional Note:\nsuper addictive (100%)\nsneaky, gingeritis*, Trropic Thunder",
-        "id": "9e6dd93d33d8f1fbc5a3f8313452ac280d09d1a22c29d0cc42679e5b04f4eee8"
+        "effects": "",
+        "notes": "",
+        "id": "b1a80a63906ca101c977bc8ebe62eba563fb4f191ef2e87b90229cc70e7904c436e12117b140a48001019c1c20d1ae1b844cf0b11712a0c5fdf377b82beb9bb5"
     },
     "Ultra Slime": {
         "ingredients": "Sour Diesel\nParacetamol (white pills)",
         "instructions": "Sour Diesel + Paracetamol = Ultra Slime\n\nAdditional notes:\nsneaky",
-        "id": "f4f4b237b02cc0c32c83c52a12e3fa02d0324fe28fb393d8f6d8f4dc2a4becfb"
+        "effects": "",
+        "notes": "",
+        "id": "b02edd829d2a35d83237b565ca3ea71afcaa4b85c7192ad0d4045d8450394079327aab8795fa3a7c37e9c16115483301d86b94d6f584ae4766eec2be225a5739"
     },
     "Stinky Cake": {
         "ingredients": "Sour Diesel\nParacetamol\nGasoline",
         "instructions": "Sour Diesel + Paracetamol = Ultra Slime\nUltra Slime + Gasoline = Stinky Cake\n\nAdditional notes:\nvery addictive (95%)",
-        "id": "3040234ac2140100655da62102a8d09f03a1b0b5a4bdc5ae4cba8c4356d0f808"
+        "effects": "",
+        "notes": "",
+        "id": "f81c1c2a2c497d5a88f6a14bf46929dc905af778d1f4bc2884b84c75cc3d80500a5f99dbf4b2d08d06c26a386eb32ea1fb2403cf46210200e3d5886fef644c50"
     },
     "Nightmare Ass": {
         "ingredients": "Og Kush\nViagra\nBanana\nEnergy Drink",
         "instructions": "Og Kush + Viagra = Aspen Death\nAspen Death + Banana = Banana Cock\nBanana Cock + Energy Drink = Nightmare Ass\n\nAdditional Note:\nsneaky, athletic, super addictive (100%)",
-        "id": "aac32e60b201b419fbba08135cf25b06e9b3818fd871229d2da6a2fbff482b6b"
+        "effects": "",
+        "notes": "",
+        "id": "69b1cb18ffe02a2065df92980a10fd2629c7643e4c23a531d580908a64853eace44a663cdcb471a2b37766ab1263e90bbb66adac0155a44466425af16f44d698"
     },
     "Sweet Queef": {
         "ingredients": "Og Kush\nViagra\nBanana\nEnergy Drink\nDonut",
         "instructions": "Og Kush + Viagra = Aspen Death\nAspen Death + Banana = Banana Cock\nBanana Cock + Energy Drink = Nightmare Ass\nNightmare Ass + Donut = Sweet Queef\n\nAdditional Note:\nsneaky, athletic, super addictive (100%)",
-        "id": "d4fb7ab828a949cf0447b8ea38b375404d3d155b9481c22a31f16049e0fb4d70"
+        "effects": "",
+        "notes": "",
+        "id": "54ed8a6242f59ac56e45d8f46814a20a9a96d1f17f9a063e634608826d0c9d1b499b925c748d6415052f27d1f1ed92548b514ff7d1824838a362d4b045c3f327"
     },
     "Sexy Assblaster": {
         "ingredients": "Og Kush\nViagra\nBanana\nEnergy Drink\nDonut\nFlu Medicine",
         "instructions": "Og Kush + Viagra = Aspen Death\nAspen Death + Banana = Banana Cock\nBanana Cock + Energy Drink = Nightmare Ass\nNightmare Ass + Donut = Sweet Queef\nSweet Queef + Flu Medicine = Sexy Assblaster\n\nAdditional Note:\nsneaky, super addictive (100%)",
-        "id": "f0bc9a145d6942af15113e1aef3136a1ca77c96d644ed2a8bd7e3a2f14e78ab2"
+        "effects": "",
+        "notes": "",
+        "id": "4c71b8e8c08bc5f8a723a4ce0d9a78b0fa7da4f205ea3ca75010570882e25fed98996caaf771ca1c6a207d9a4f2f038799014f001cdc985dcc53b6b0227a9429"
     },
     "Sexy Queef": {
         "ingredients": "Og Kush\nViagra\nBanana\nEnergy Drink\nDonut\nFlu Medicine\nGasoline",
         "instructions": "Og Kush + Viagra = Aspen Death\nAspen Death + Banana = Banana Cock\nBanana Cock + Energy Drink = Nightmare Ass\nNightmare Ass + Donut = Sweet Queef\nSweet Queef + Flu Medicine = Sexy Assblaster\nSexy Assblaster + Gasoline = Sexy Queef\n\nAdditional Note:\nsneaky, super addictive (100%)",
-        "id": "2e3bb079d8b60855fed11bf55e59fa8711c255dea40228f5562d53c134ef1b67"
+        "effects": "",
+        "notes": "",
+        "id": "96fd87a5e30af9989433442441c2f64dbc9807149cb0f716cb43870df5778c9cba9e6083b2774225042aa12932e6c0e7e132b5e7bd49720c89e93008bf165352"
     },
     "Pink Shart": {
         "ingredients": "Og Kush\nViagra\nBanana\nEnergy Drink\nDonut\nFlu Medicine\nGasoline\nParacetamol",
         "instructions": "Og Kush + Viagra = Aspen Death\nAspen Death + Banana = Banana Cock\nBanana Cock + Energy Drink = Nightmare Ass\nNightmare Ass + Donut = Sweet Queef\nSweet Queef + Flu Medicine = Sexy Assblaster\nSexy Assblaster + Gasoline = Sexy Queef\nSexy Queef + Paracetamol = Pink Shart\n\nAdditional Note:\nsneaky, anti gravity, super addictive (100%)",
-        "id": "2e3e5dc9b4f33cc6333edc07f4daf92a19e777cf077a0d1b84883d677d9acd88"
+        "effects": "",
+        "notes": "",
+        "id": "c26d7ddf2f63bc5d75770d7c5101482e2e2b5f5b2b5c476a62c9c56365b6645728e082a0c5c939c09758f0a0441743d26bd605ef42ab68824b878259c881d06d"
     },
     "Mega Puke": {
         "ingredients": "Og Kush\nViagra\nBanana\nEnergy Drink\nDonut\nFlu Medicine\nGasoline\nParacetamol\nCuke",
         "instructions": "Og Kush + Viagra = Aspen Death\nAspen Death + Banana = Banana Cock\nBanana Cock + Energy Drink = Nightmare Ass\nNightmare Ass + Donut = Sweet Queef\nSweet Queef + Flu Medicine = Sexy Assblaster\nSexy Assblaster + Gasoline = Sexy Queef\nSexy Queef + Paracetamol = Pink Shart\nPink Shart + Cuke = Mega Puke\n\nAdditional Note:\nanti gravity, super addictive (100%)",
-        "id": "0c954f575cb1cdba920b0fb7c23c5d59f0237db522d7d34aa7720eec2f63a243"
+        "effects": "",
+        "notes": "",
+        "id": "d8dc1d5dcd8ca426c61b8df9f5d1db28692370afcfb3fd7106f366ac5ecb9b8d806c13ee3dc4cfb1fdf80d959e993e5cb1a93988050eca4f2c2dab55c8bb4214"
     },
     "Strawberry Shart": {
         "ingredients": "Granddaddy Purple\nEnergy Drink",
         "instructions": "Granddaddy Purple + Energy Drink = Strawberry Shart\n\nAdditional Note:\nathletic",
-        "id": "25d969135c267477ada6062b1680449ea0e087b7e56ff458758415e99be48446"
+        "effects": "",
+        "notes": "",
+        "id": "9467de34feff20a872bac057011ab75e2e54dd971b54be2c8e9bd63646bc90cb57ea2f0d24b4c858dc7f489a1f690a0a3c1803bb7ebc10aafd633c6093f80277"
     },
     "Granddaddy Fuel": {
         "ingredients": "Granddaddy Purple\nEnergy Drink\nParacetamol",
         "instructions": "Granddaddy Purple + Energy Drink = Strawberry Shart\nStrawberry Shart + Paracetamol = Granddaddy Fuel\n\nAdditional Note:\nsneaky, athletic, anti gravity",
         "effects": "sneaky\nathletic\nanti gravity",
         "notes": "",
-        "id": "5ffd8d8849783c16ea4eefa1ce7866b0f2c1b136be67f90ac08836d120cc6de8"
+        "id": "67aa8066d3e1c657d6fb0bf5631b507e0d21bbb298607ab41f1eb9cc9495740bc0fe7e0e4a80926639002e5e9390fbe2600f4cb1cb4c11c08864222304e09c27"
     },
     "OG Ass": {
         "ingredients": "Og Kush\nViagra\nBanana\nEnergy Drink\n2x Donut\nFlu Medicine\nGasoline\nParacetamol\nCuke",
         "instructions": "Og Kush + Viagra = Aspen Death\nAspen Death + Banana = Banana Cock\nBanana Cock + Energy Drink = Nightmare Ass\nNightmare Ass + Donut = Sweet Queef\nSweet Queef + Flu Medicine = Sexy Assblaster\nSexy Assblaster + Gasoline = Sexy Queef\nSexy Queef + Paracetamol = Pink Shart\nPink Shart + Cuke = Mega Puke\nMega Puke + Donut = OG Ass\n\nAdditional Note:\nexplosive, super addictive (100%)",
-        "id": "e64d887dd293d229b913ca6b6fec89aae49b7a0c484797394021392ef074a8ec"
+        "effects": "",
+        "notes": "",
+        "id": "6b9cad98b0ba47d2312af936fdb5010094d1c433287825f22e7eba63ea272bd1906c69bb444799e96eb7cbf6e14daa412ec425044ed26947606877e65b00d3ef"
     },
     "Ultra Fruit": {
         "ingredients": "Meth\nBanana",
         "instructions": "Meth + Banana = Ultra Fruit",
         "effects": "Gingeritis",
         "notes": "",
-        "id": "1d02c952ca9411433a1d98b7b71c201ada7d14e1e898cfb66d6a1c91456f35e5"
+        "id": "08cdbc240978478f761e5b5cecdd79203d71397adfe30301c7ba2d218b013bc88e3fc7b503e71b3bb6a7a88bd2daba6e8fccf17c948122a0e09b9da807cef8a2"
     },
     "Slimy Assblaster": {
         "ingredients": "Meth\nBanana\nEnergy Drink",
         "instructions": "Meth + Banana = Ultra Fruit\nUltra Fruit + Energy Drink = Slimy Assblaster",
         "effects": "Gingeritis\nAthletic",
         "notes": "Price over $100\nsuper addictive (100%)",
-        "id": "f7eb2a334211098c61035295506d736ec631b4bf9f624d8c24eabe486ad6c873"
+        "id": "666cd41b894e15d84c19af1664ad5fa2a188d174b42f0d2c62eb1ce36b7f014ad93c5875bfca76c9718ecd4961e4a8e885b91fbaafcf7cfad35aa8ada705a129"
     }
 }
