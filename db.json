@@ -117,5 +117,82 @@
         "effects": "Gingeritis\nAthletic",
         "notes": "Price over $100\nsuper addictive (100%)",
         "id": "150176095f517e2cf153e3f51cf4e46b461eaf2bbeaf8695115e2480e2018e260614352455b1de6608ed40219cad2492a808b4d62d4ecc219f0bd14fcade9936"
+    },
+    "Aspen Cake": {
+        "ingredients": "Meth\nCuke",
+        "instructions": "Meth + Cuke = Aspen Cake",
+        "effects": "Energizing",
+        "notes": "very addictive (94%)",
+        "id": "3cdfd3426fb92b921d8a82e96ec2b0fcfc50686f13a0067e87df137e6fbe6b844324f68418c1cd40d373f8807897d5c87ac87ec4b1849dbdaea3541d4e631dc9"
+    },
+    "Dark Bud": {
+        "ingredients": "Meth\nCuke\nParacetamol",
+        "instructions": "Meth + Cuke = Aspen Cake\nAspen Cake + Paracetamol = Dark Bud",
+        "effects": "Paranoia\nSneaky",
+        "notes": "very addictive (92%)",
+        "id": "d990c8f99eb986d854f76a22720bad4f008243bffa9937f02f4dc7488bd35e192719be7ec7877bd961449482036eef328e2b0e487ee7e66a048062f0618c2b3e"
+    },
+    "Extreme Punch": {
+        "ingredients": "Sour Diesel\nMouth Wash",
+        "instructions": "Sour Diesel + Mouth Wash = Extreme Punch",
+        "effects": "Refreshing\nBalding",
+        "notes": "",
+        "id": "9060b6688fd7628f22071675518cb49a96ea5724bfb6a69d9502e07ce10be750a51d87cefb547e3aee0d23f8bce66236088b0ad40951c78ede1f1561e77cfc0c"
+    },
+    "Afghan Crack": {
+        "ingredients": "Sour Diesel\nMouth Wash\nEnergy Drink",
+        "instructions": "Sour Diesel + Mouth Wash = Extreme Punch\nExtreme Punch + Energy Drink = Afghan Crack",
+        "effects": "Refreshing\nBalding\nAthletic",
+        "notes": "addictive (76%)",
+        "id": "be917085ce10f7e63892a255d0c09f3d54d24491c5f226b575554ddf7fff4a47db6ba2568c519e82fefac0360d3e947c17fae133b7e69430a3a0caffb61c3a0e"
+    },
+    "Fruity Thunderfuck": {
+        "ingredients": "Meth\nCuke\nParacetamol\nBanana",
+        "instructions": "Meth + Cuke = Aspen Cake\nAspen Cake + Paracetamol = Dark Bud\nDark Bud + Banana = Fruity Thunderfuck",
+        "effects": "Sneaky\nGingeritis\nJennerising",
+        "notes": "super addictive (100%)",
+        "id": "bd739e3dcf1c85b697ce67d8d448ac777d7db0f394ac8131d7bea94196582099d2abf93082f1be12f9cb064db572425cef28b1a6ac64fa270473f7c9b485a641"
+    },
+    "Big Urkle": {
+        "ingredients": "Meth\nCuke\nParacetamol\nBanana\nGasoline",
+        "instructions": "Meth + Cuke = Aspen Cake\nAspen Cake + Paracetamol = Dark Bud\nDark Bud + Banana = Fruity Thunderfuck\nFruity Thunderfuck + Gasoline = Big Urkle",
+        "effects": "Smelly\nToxic\nSneaky\nTropic Thunder",
+        "notes": "super addictive (100%)",
+        "id": "7b2820a519092513d18cd38da33d12e109c9b04e970a501b13bf3cf671adaa270f0a54ab3406493b734031f073dd296c3cc02775f5f3d4be4696ad9c1204830a"
+    },
+    "Dark Crack": {
+        "ingredients": "Meth\n2x Cuke\nParacetamol\nBanana\nGasoline",
+        "instructions": "Meth + Cuke = Aspen Cake\nAspen Cake + Paracetamol = Dark Bud\nDark Bud + Banana = Fruity Thunderfuck\nFruity Thunderfuck + Gasoline = Big Urkle\nBig Urkle + Cuke = Dark Crack",
+        "effects": "Paranoia\nSmelly\nEuphoric\nEnergizing\nTropic Thunder",
+        "notes": "super addictive (100%)",
+        "id": "1c9cd27b133a34ab6f6a028f7dee9d04c2bf3a66a38c3d435981f42d82d44bbcb28ecb38b56375592b6eba7a1715010df5382ef0b1a1f06fabdf6d952c25bc55"
+    },
+    "Fat Diamond": {
+        "ingredients": "Meth\n2x Cuke\nParacetamol\nBanana\nGasoline\nMega Bean",
+        "instructions": "Meth + Cuke = Aspen Cake\nAspen Cake + Paracetamol = Dark Bud\nDark Bud + Banana = Fruity Thunderfuck\nFruity Thunderfuck + Gasoline = Big Urkle\nBig Urkle + Cuke = Dark Crack\nDark Crack + Mega Bean = Fat Diamond",
+        "effects": "Paranoia\nEuphoric\nTropic Thunder\nSmelly\nFoggy\nCyclopean",
+        "notes": "super addictive (100%)",
+        "id": "e40cbdd90b268abe6a4105ebb971b07019998317301c07f73b7123008fb3c93136669c4a7fa745893245dd9f89b7a8dca4f982059ab7bf7e7fb6aa7c052fc242"
+    },
+    "White Diamond": {
+        "ingredients": "Meth\n2x Cuke\nParacetamol\nBanana\nGasoline\nMega Bean\nBattery",
+        "instructions": "Meth + Cuke = Aspen Cake\nAspen Cake + Paracetamol = Dark Bud\nDark Bud + Banana = Fruity Thunderfuck\nFruity Thunderfuck + Gasoline = Big Urkle\nBig Urkle + Cuke = Dark Crack\nDark Crack + Mega Bean = Fat Diamond\nFat Diamond + Battery = White Diamond",
+        "effects": "Paranoia\nFoggy\nTropic Thunder\nZombifying\nSmelly\nBright-Eyed\nGlowing",
+        "notes": "super addictive (100%)",
+        "id": "9960fc864eab84dd8dda71066d9a569eb2079a75d291dd008c2ace60b0fb48476c97534e82adbe6412a99c4e6cf1ab4579188cf090ccd3dfdb2a878a6e88477c"
+    },
+    "Banana Fruit": {
+        "ingredients": "Meth\n2x Cuke\nParacetamol\n2x Banana\nGasoline\nMega Bean\nBattery",
+        "instructions": "Meth + Cuke = Aspen Cake\nAspen Cake + Paracetamol = Dark Bud\nDark Bud + Banana = Fruity Thunderfuck\nFruity Thunderfuck + Gasoline = Big Urkle\nBig Urkle + Cuke = Dark Crack\nDark Crack + Mega Bean = Fat Diamond\nFat Diamond + Battery = White Diamond\nWhite Diamond + Banana = Banana Fruit",
+        "effects": "Gingeritis\nBright-Eyed\nTropic Thunder\nAnti Gravity\nFoggy\nJennerising\nGlowing\nZombifying",
+        "notes": "super addictive (100%)",
+        "id": "b582ec5e3ce1e9ca663ba65623f7ae3e765a4266c1c7d7e23b75eca00dec6d8597a330d188d6731b548a03b47843a01173f01d552416b5c59fa15caf5fcc1abe"
+    },
+    "Girl Scout Monkey": {
+        "ingredients": "Meth\n3x Cuke\nParacetamol\n2x Banana\nGasoline\nMega Bean\nBattery",
+        "instructions": "Meth + Cuke = Aspen Cake\nAspen Cake + Paracetamol = Dark Bud\nDark Bud + Banana = Fruity Thunderfuck\nFruity Thunderfuck + Gasoline = Big Urkle\nBig Urkle + Cuke = Dark Crack\nDark Crack + Mega Bean = Fat Diamond\nFat Diamond + Battery = White Diamond\nWhite Diamond + Banana = Banana Fruit\nBanana Fruit + Cuke = Girl Scout Monkey",
+        "effects": "Bright-Eyed\nThought Provoking\nGlowing\nCyclopean\nJennerising\nTropic Thunder\nAnti Gravity\nZombifying",
+        "notes": "super addictive (100%)",
+        "id": "accbb1d525df2d245809e1fbd4e15e5a3eafdf26d5130a98d36b81ea011b182ec2f8135e6cd3eed98d428c125c585b2d1653def12b9a3f44c260684e9fc82761"
     }
 }
