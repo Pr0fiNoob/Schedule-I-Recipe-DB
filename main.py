@@ -85,10 +85,12 @@ def show_recipe_list():
         data = json.load(file)
         file.close()
 
-    def search_recipes():
+    def search_recipes(*args):  # Accept any number of arguments to handle both event and direct calls
         search_query = search_entry.get().lower()
+        # Clear current recipes
         for widget in scrollable_frame.winfo_children():
             widget.destroy()
+        # Add matching recipes
         for recipe_name, recipe in data.items():
             if search_query in recipe_name.lower():
                 add_recipe_to_frame(recipe_name, recipe)
@@ -161,13 +163,20 @@ def show_recipe_list():
     recipe_window.title("Recipe List")
     recipe_window.geometry("600x450")
 
-    # Add a search bar
+    # Update search frame code
     search_frame = Frame(recipe_window)
     search_frame.pack(fill=X, padx=10, pady=5)
     search_label = Label(search_frame, text="Search:", font=("Arial", 10))
     search_label.pack(side=LEFT, padx=5)
+    
     search_entry = Entry(search_frame, font=("Arial", 10))
     search_entry.pack(side=LEFT, fill=X, expand=True, padx=5)
+    
+    # Bind to both KeyRelease and KeyPress events
+    search_entry.bind('<KeyRelease>', search_recipes)
+    search_entry.bind('<KeyPress>', search_recipes)
+    
+    # Search button now calls the same function
     search_button = Button(search_frame, text="Search", command=search_recipes)
     search_button.pack(side=LEFT, padx=5)
 
