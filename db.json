@@ -194,5 +194,33 @@
         "effects": "Bright-Eyed\nThought Provoking\nGlowing\nCyclopean\nJennerising\nTropic Thunder\nAnti Gravity\nZombifying",
         "notes": "super addictive (100%)",
         "id": "accbb1d525df2d245809e1fbd4e15e5a3eafdf26d5130a98d36b81ea011b182ec2f8135e6cd3eed98d428c125c585b2d1653def12b9a3f44c260684e9fc82761"
+    },
+    "Mega Piss": {
+        "ingredients": "Granddaddy Purple\nEnergy Drink\nParacetamol\nBattery",
+        "instructions": "Granddaddy Purple + Energy Drink = Strawberry Shart\nStrawberry Shart + Paracetamol = Granddaddy Fuel\nGranddaddy Fuel + Battery = Mega Piss",
+        "effects": "Sneaky\nAthletic\nBright-Eyed\nAnti Gravity",
+        "notes": "super addictive (100%)",
+        "id": "d97aa18c617c875e79ca70ae880313c5a9c211f3b6514f4c76ce50f8b9ff4186038414502b4191591ddceb0434e0a8c1ffbf2b5586fdeba4a6729a02f8d2d104"
+    },
+    "Purple Cheese": {
+        "ingredients": "Og Kush\nMouth Wash",
+        "instructions": "Og Kush + Mouth Wash = Purple Cheese",
+        "effects": "Balding\nAnti Gravity",
+        "notes": "addictive (66%)",
+        "id": "28de1cecd3f5041bf3c174663ee5202db7de978122fb748c0fbb76f34470b4d750cdce776bb71d1b28e8adbc9f7e902505a4367d7a3557caf67e363a7f07ab94"
+    },
+    "Purple Express": {
+        "ingredients": "Og Kush\nMouth Wash\nCuke",
+        "instructions": "Og Kush + Mouth Wash = Purple Cheese\nPurple Cheese + Cuke = Purple Express",
+        "effects": "Energizing\nBalding\nAnti Gravity",
+        "notes": "super addictive (100%)",
+        "id": "69cb4a3431757c4840f0f9a37e85774864101e0cfdab15e8254f057745de116b5d660cd60a52487902ae26bb62f0b7991eb4acbf5c75073ccd12724f90d2e373"
+    },
+    "Ice Cream Shart": {
+        "ingredients": "Og Kush\nMouth Wash\nCuke\nBanana",
+        "instructions": "Og Kush + Mouth Wash = Purple Cheese\nPurple Cheese + Cuke = Purple Express\nPurple Express + Banana = Ice Cream Shart",
+        "effects": "Gingeritis\nThought-Provoking\nAnti Gravity",
+        "notes": "super addictive (100%)",
+        "id": "7bfcc2a6ae6a428dc53fab35457fd6b6f15e02b8b4e9baef14270324e4b1edc9f289322d5a4bba5fc2c98d652a1b4173fbcd0b5c09a7ee25d6aaf10a7f5ab610"
     }
 }
