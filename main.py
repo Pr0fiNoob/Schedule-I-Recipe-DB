@@ -14,25 +14,40 @@ def format_effects(effects_text):
 
 # Predefined effects (add your effects here)
 EFFECTS = [
-    "Sneaky",
+    "Anti-Gravity",
     "Athletic",
-    "Gingeritis",
-    "Tropic Thunder",
-    "Anti Gravity",
-    "Paranoia",
-    "Energizing",
-    "Refreshing",
     "Balding",
-    "Euphoric",
-    "Smelly",
-    "Toxic",
-    "Foggy",
-    "Cyclopean",
-    "Zombifying",
     "Bright-Eyed",
+    "Calming",
+    "Calorie-Dense",
+    "Cyclopean",
+    "Disorienting",
+    "Electrifying",
+    "Energizing",
+    "Euphoric",
+    "Explosive",
+    "Focused",
+    "Foggy",
+    "Gingeritis",
     "Glowing",
     "Jennerising",
-    "Thought Provoking"
+    "Laxative",
+    "Long Faced",
+    "Munchies",
+    "Paranoia",
+    "Refreshing",
+    "schizophrenia",
+    "Sedating",
+    "Seizure-Inducing",
+    "Shrinking",
+    "Slippery",
+    "Smelly",
+    "Sneaky",
+    "Spicy",
+    "Thought-Provoking",
+    "Toxic",
+    "Tropic Thunder",
+    "Zombifying"
 ]
 
 # Open Database
@@ -227,7 +242,7 @@ def show_recipe_list():
     search_entry.pack(side=LEFT, fill=X, expand=True, padx=5)
     
     effects_button = Button(search_frame, text="Filter Effects", 
-                          command=lambda: show_effects_filter(recipe_window, update_selected_effects))
+                        command=lambda: show_effects_filter(recipe_window, update_selected_effects))
     effects_button.pack(side=RIGHT, padx=5)
     
     # Bind search event
@@ -341,7 +356,7 @@ def save_recipe(name, ingredients, instructions, effects, notes):
 def show_effects_filter(parent, callback):
     filter_window = Toplevel(parent)
     filter_window.title("Filter Effects")
-    filter_window.geometry("300x400")
+    filter_window.geometry("300x630")
 
     # Create frame for effects list
     effects_frame = Frame(filter_window)
