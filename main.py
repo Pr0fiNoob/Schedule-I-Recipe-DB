@@ -1,7 +1,54 @@
 from tkinter import *
 from tkinter import messagebox
+from tkinter import ttk  # Add this import for Combobox
 import hashlib
 import json
+
+# Add this helper function after the imports
+def format_effects(effects_text):
+    """Standardize effects format: lowercase with first letter capitalized"""
+    if not effects_text:
+        return ""
+    effects = [e.strip() for e in effects_text.split('\n') if e.strip()]
+    return '\n'.join(e[0].upper() + e[1:].lower() if e else '' for e in effects)
+
+# Predefined effects (add your effects here)
+EFFECTS = [
+    "Anti-Gravity",
+    "Athletic",
+    "Balding",
+    "Bright-Eyed",
+    "Calming",
+    "Calorie-Dense",
+    "Cyclopean",
+    "Disorienting",
+    "Electrifying",
+    "Energizing",
+    "Euphoric",
+    "Explosive",
+    "Focused",
+    "Foggy",
+    "Gingeritis",
+    "Glowing",
+    "Jennerising",
+    "Laxative",
+    "Long Faced",
+    "Munchies",
+    "Paranoia",
+    "Refreshing",
+    "schizophrenia",
+    "Sedating",
+    "Seizure-Inducing",
+    "Shrinking",
+    "Slippery",
+    "Smelly",
+    "Sneaky",
+    "Spicy",
+    "Thought-Provoking",
+    "Toxic",
+    "Tropic Thunder",
+    "Zombifying"
+]
 
 # Open Database
 with open("db.json", "r") as file:
@@ -85,13 +132,36 @@ def show_recipe_list():
         data = json.load(file)
         file.close()
 
-    def search_recipes():
+    # Keep track of currently selected effects
+    selected_effects = []
+
+    def search_recipes(*args):
         search_query = search_entry.get().lower()
+        
+        # Clear current recipes
         for widget in scrollable_frame.winfo_children():
             widget.destroy()
+        
+        # Add matching recipes
         for recipe_name, recipe in data.items():
-            if search_query in recipe_name.lower():
+            name_matches = search_query in recipe_name.lower()
+            
+            # Get recipe effects and convert to lowercase
+            recipe_effects = [effect.lower() for effect in recipe.get("effects", "").split("\n") if effect]
+            
+            # Check if ALL selected effects are in recipe effects
+            effect_matches = (
+                not selected_effects or  # No effects selected, show all
+                all(effect.lower() in recipe_effects for effect in selected_effects)
+            )
+            
+            if name_matches and effect_matches:
                 add_recipe_to_frame(recipe_name, recipe)
+
+    def update_selected_effects(effects):
+        nonlocal selected_effects
+        selected_effects = effects
+        search_recipes()
 
     def add_recipe_to_frame(recipe_name, recipe):
         recipe_frame = Frame(scrollable_frame, borderwidth=2, relief="solid", padx=5, pady=5)
@@ -161,15 +231,22 @@ def show_recipe_list():
     recipe_window.title("Recipe List")
     recipe_window.geometry("600x450")
 
-    # Add a search bar
+    # Update search frame code
     search_frame = Frame(recipe_window)
     search_frame.pack(fill=X, padx=10, pady=5)
+    
     search_label = Label(search_frame, text="Search:", font=("Arial", 10))
     search_label.pack(side=LEFT, padx=5)
+    
     search_entry = Entry(search_frame, font=("Arial", 10))
     search_entry.pack(side=LEFT, fill=X, expand=True, padx=5)
-    search_button = Button(search_frame, text="Search", command=search_recipes)
-    search_button.pack(side=LEFT, padx=5)
+    
+    effects_button = Button(search_frame, text="Filter Effects", 
+                        command=lambda: show_effects_filter(recipe_window, update_selected_effects))
+    effects_button.pack(side=RIGHT, padx=5)
+    
+    # Bind search event
+    search_entry.bind('<KeyRelease>', search_recipes)
 
     # Create a canvas and a scrollbar
     canvas = Canvas(recipe_window)
@@ -254,15 +331,17 @@ def save_recipe(name, ingredients, instructions, effects, notes):
     if not name or not ingredients or not instructions:
         return
 
+    # Format effects before saving
+    formatted_effects = format_effects(effects)
+
     # Combine all recipe content for hashing
-    recipe_content = f"{name.strip()}{ingredients.strip()}{instructions.strip()}{effects.strip()}{notes.strip()}".encode()
-    # Create SHA-512 hash of the entire recipe content
+    recipe_content = f"{name.strip()}{ingredients.strip()}{instructions.strip()}{formatted_effects.strip()}{notes.strip()}".encode()
     recipe_id = hashlib.sha512(recipe_content).hexdigest()
 
     recipe = {
         "ingredients": ingredients.strip(),
         "instructions": instructions.strip(),
-        "effects": effects.strip(),
+        "effects": formatted_effects,  # Store formatted effects
         "notes": notes.strip(),
         "id": recipe_id
     }
@@ -271,9 +350,47 @@ def save_recipe(name, ingredients, instructions, effects, notes):
     data[f"{name}"] = recipe
     with open("db.json", "w") as file:
         json.dump(data, file, indent=4)
-        file.close()
 
     print(f"Recipe '{name}' saved with ID: {recipe_id}")
+
+def show_effects_filter(parent, callback):
+    filter_window = Toplevel(parent)
+    filter_window.title("Filter Effects")
+    filter_window.geometry("300x630")
+
+    # Create frame for effects list
+    effects_frame = Frame(filter_window)
+    effects_frame.pack(fill=BOTH, expand=True, padx=10, pady=5)
+
+    # Label
+    Label(effects_frame, text="Select Effects:", font=("Arial", 10, "bold")).pack(pady=5)
+
+    # Create Listbox for multiple effect selection
+    effects_list = Listbox(effects_frame, selectmode=MULTIPLE, height=15)
+    for effect in EFFECTS:  # Skip "All Effects"
+        effects_list.insert(END, effect)
+    effects_list.pack(side=LEFT, fill=BOTH, expand=True)
+
+    # Add scrollbar
+    scrollbar = Scrollbar(effects_frame, orient=VERTICAL, command=effects_list.yview)
+    scrollbar.pack(side=RIGHT, fill=Y)
+    effects_list.config(yscrollcommand=scrollbar.set)
+
+    # Buttons frame
+    button_frame = Frame(filter_window)
+    button_frame.pack(fill=X, padx=10, pady=5)
+
+    def deselect_all():
+        effects_list.selection_clear(0, END)
+
+    def apply_filter():
+        selected = [effects_list.get(i) for i in effects_list.curselection()]
+        callback(selected)
+        filter_window.destroy()
+
+    # Add buttons
+    Button(button_frame, text="Deselect All", command=deselect_all).pack(side=LEFT, padx=5)
+    Button(button_frame, text="Apply Filter", command=apply_filter).pack(side=RIGHT, padx=5)
 
 root = Tk()
 
