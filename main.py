@@ -380,9 +380,6 @@ def show_effects_filter(parent, callback):
     button_frame = Frame(filter_window)
     button_frame.pack(fill=X, padx=10, pady=5)
 
-    def select_all():
-        effects_list.select_set(0, END)
-
     def deselect_all():
         effects_list.selection_clear(0, END)
 
@@ -392,7 +389,6 @@ def show_effects_filter(parent, callback):
         filter_window.destroy()
 
     # Add buttons
-    Button(button_frame, text="Select All", command=select_all).pack(side=LEFT, padx=5)
     Button(button_frame, text="Deselect All", command=deselect_all).pack(side=LEFT, padx=5)
     Button(button_frame, text="Apply Filter", command=apply_filter).pack(side=RIGHT, padx=5)
 
