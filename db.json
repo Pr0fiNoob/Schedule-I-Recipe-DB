@@ -94,8 +94,8 @@
         "ingredients": "Granddaddy Purple\nEnergy Drink\nParacetamol",
         "instructions": "Granddaddy Purple + Energy Drink = Strawberry Shart\nStrawberry Shart + Paracetamol = Granddaddy Fuel\n\nAdditional Note:\nsneaky, athletic, anti gravity",
         "effects": "Sneaky\nAthletic\nAnti-gravity",
-        "notes": "perfect to get away form police",
-        "id": "25db31e96cdb6a0ee0feeb0f356fb1bc02e6ff1b2af3e40d953a7f91e1dd20559b70c13f5943d8ee965272179f9ea20b7ea053cf6875155131d1dee45f07b967"
+        "notes": "perfect to get away from police",
+        "id": "10d2f02a01c36d156a6734d67634678fd261e6ca90ea8bf67ecdfa8d9bbd4bd99cb06f1d1d76f17eded102bc0daac072bdd43f126c1a9ae39acb1e0431a81e2c"
     },
     "OG Ass": {
         "ingredients": "Og Kush\nViagra\nBanana\nEnergy Drink\n2x Donut\nFlu Medicine\nGasoline\nParacetamol\nCuke",
@@ -191,9 +191,9 @@
     "Girl Scout Monkey": {
         "ingredients": "Meth\n3x Cuke\nParacetamol\n2x Banana\nGasoline\nMega Bean\nBattery",
         "instructions": "Meth + Cuke = Aspen Cake\nAspen Cake + Paracetamol = Dark Bud\nDark Bud + Banana = Fruity Thunderfuck\nFruity Thunderfuck + Gasoline = Big Urkle\nBig Urkle + Cuke = Dark Crack\nDark Crack + Mega Bean = Fat Diamond\nFat Diamond + Battery = White Diamond\nWhite Diamond + Banana = Banana Fruit\nBanana Fruit + Cuke = Girl Scout Monkey",
-        "effects": "Bright-Eyed\nThought Provoking\nGlowing\nCyclopean\nJennerising\nTropic Thunder\nAnti Gravity\nZombifying",
-        "notes": "super addictive (100%)",
-        "id": "accbb1d525df2d245809e1fbd4e15e5a3eafdf26d5130a98d36b81ea011b182ec2f8135e6cd3eed98d428c125c585b2d1653def12b9a3f44c260684e9fc82761"
+        "effects": "Bright-eyed\nThought provoking\nGlowing\nCyclopean\nJennerising\nTropic thunder\nAnti gravity\nZombifying",
+        "notes": "super addictive (100%)\nhigh fair price ($342)",
+        "id": "461a45f49b3380e401b97575c45f3a5918c54fe447e3a1fe8984b0ddd82b05db759c5f53e9f9cf1666f99dcebc8cf0e379b5fad8fd30dad09422b6bd2bf4d9be"
     },
     "Mega Piss": {
         "ingredients": "Granddaddy Purple\nEnergy Drink\nParacetamol\nBattery",
@@ -222,5 +222,19 @@
         "effects": "Gingeritis\nThought-Provoking\nAnti Gravity",
         "notes": "super addictive (100%)",
         "id": "7bfcc2a6ae6a428dc53fab35457fd6b6f15e02b8b4e9baef14270324e4b1edc9f289322d5a4bba5fc2c98d652a1b4173fbcd0b5c09a7ee25d6aaf10a7f5ab610"
+    },
+    "Bio Splooge": {
+        "ingredients": "Meth\n3x Cuke\nParacetamol\n2x Banana\nGasoline\nMega Bean\nBattery\nHorse Semen",
+        "instructions": "Meth + Cuke = Aspen Cake\nAspen Cake + Paracetamol = Dark Bud\nDark Bud + Banana = Fruity Thunderfuck\nFruity Thunderfuck + Gasoline = Big Urkle\nBig Urkle + Cuke = Dark Crack\nDark Crack + Mega Bean = Fat Diamond\nFat Diamond + Battery = White Diamond\nWhite Diamond + Banana = Banana Fruit\nBanana Fruit + Cuke = Girl Scout Monkey\nGirl Scout Monkey + Horse Semen = Bio Splooge",
+        "effects": "Calming\nJennerising\nGlowing\nCyclopean\nBright-eyed\nTropic thunder\nElectrifying\nZombifying",
+        "notes": "super addictive (100%)\nhigh fair price ($315)",
+        "id": "ad78b37266d40a8b5c7a126ef9838f60784c427f96ef502a6111353e26880bd852d36ad382da90e601da93cc131607c45f182a856e063d7a10f8354cfe2b1ff2"
+    },
+    "Aspen Fuel": {
+        "ingredients": "Og Kush\nViagra\nBanana\nHorse Semen",
+        "instructions": "Og Kush + Viagra = Aspen Death\nAspen Death + Banana = Banana Cock\nBanana Cock + Horse Semen = Aspen Fuel",
+        "effects": "Refreshing\nSneaky\nTropic thunder\nLong faced",
+        "notes": "super addictive (100%)",
+        "id": "3be9a088093e689e4418aa1c55fea4019521f94fa0035434669a460416f588c09dd3d0c234f8f71f054f72fd25e962af4b05f6b17643d717e0019e5109859038"
     }
 }
