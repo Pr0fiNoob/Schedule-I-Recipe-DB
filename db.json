@@ -236,5 +236,75 @@
         "effects": "Refreshing\nSneaky\nTropic thunder\nLong faced",
         "notes": "super addictive (100%)",
         "id": "3be9a088093e689e4418aa1c55fea4019521f94fa0035434669a460416f588c09dd3d0c234f8f71f054f72fd25e962af4b05f6b17643d717e0019e5109859038"
+    },
+    "Pink Mint": {
+        "ingredients": "Meth\nAddy",
+        "instructions": "Meth + Addy = Pink Mint",
+        "effects": "Thought-provoking",
+        "notes": "very addictive (97%)",
+        "id": "cd3588bdcfad3694ad422102ceb82013d4e6c176af8ff5a3c60327f23e71dec399a7a682d8878b901a7fa5a54032d6aa0ecae51681dcccaf8f553b68e1f1bf7c"
+    },
+    "Granddaddy Gold": {
+        "ingredients": "Meth\nAddy\nHorse Semen",
+        "instructions": "Meth + Addy = Pink Mint\nPink Mint + Horse Semen = Granddaddy Gold",
+        "effects": "Electrifying\nLong faced",
+        "notes": "super addictive (100%)",
+        "id": "aec94785dcaa3982f4a12e340e998a076de8a09054eeb09ac3977f126fe0af2c109ca130ff029fcd090aa197c6d87b4c9ac505f542af3cebc8a5e42c0d3a83eb"
+    },
+    "Girl Scout Cake": {
+        "ingredients": "Cocaine\nGasoline",
+        "instructions": "Cocaine + Gasoline = Girl Scout Cake",
+        "effects": "Toxic",
+        "notes": "",
+        "id": "348d917e4eab709e16b6e9324e6d219f9f18210bcd97d044847e7092a8f0328f0b99609468205a7a1f1f69053e9d750fbdce7c0608138c208ffaede40d15c8c3"
+    },
+    "Stinky Stink": {
+        "ingredients": "Cocaine\nGasoline\nCuke",
+        "instructions": "Cocaine + Gasoline = Girl Scout Cake\nGirl Scout Cake + Cuke = Stinky Stink",
+        "effects": "Euphoric\nEnergizing",
+        "notes": "very addictive (97%)",
+        "id": "56b191716923d2c9e631b92c84f2365931542e69e3f8ab90a63736ba0621773414f69b34a6f148f336b7ec181eb96b1127b230b8519d19f4d9e0e57dbf82f295"
+    },
+    "Gorilla Splooge": {
+        "ingredients": "Cocaine\nAddy",
+        "instructions": "Cocaine + Addy = Gorilla Splooge",
+        "effects": "Thought-provoking",
+        "notes": "very addictive (77%)",
+        "id": "dff9010622c0a3d218dde3d64882c772c1eac5760814d4614e67d33894ca83657ddce8d3b33889cfc774edf7811a4af383ba690b1b4ab82bcfce6c409fbd99c8"
+    },
+    "Girl Scout Gold": {
+        "ingredients": "Cocaine\nAddy\nHorse Semen",
+        "instructions": "Cocaine + Addy = Gorilla Splooge\nGorilla Splooge + Horse Semen = Girl Scout Gold",
+        "effects": "Electrifying\nLong faced",
+        "notes": "super addictive (100%)\nhigh fair price ($303)",
+        "id": "a145e7452bb2e648b89972a93db20725ce50af29a66b5cd8018773c17aa85eff94980448a7e14af38f78cd151da17067967f172432b578e25a210339319be352"
+    },
+    "OG Dick": {
+        "ingredients": "Cocaine\nAddy\nHorse Semen\nViagra",
+        "instructions": "Cocaine + Addy = Gorilla Splooge\nGorilla Splooge + Horse Semen = Girl Scout Gold\nGirl Scout Gold + Viagra = OG Dick",
+        "effects": "Tropic thunder\nElectrifying\nLong faced",
+        "notes": "super addictive (100%)\nhigh fair price ($372)",
+        "id": "17d3a31137018fbb6adfbe2dbcbd286e0c7f8bcdc080cd22003ce8365b29aeb58650735a310a7a1fb6da7371345f8a79e75c205b8160d88ef05f11903ba08a43"
+    },
+    "Thick McLovin": {
+        "ingredients": "Cocaine\nAddy\nHorse Semen\nViagra\nIodine",
+        "instructions": "Cocaine + Addy = Gorilla Splooge\nGorilla Splooge + Horse Semen = Girl Scout Gold\nGirl Scout Gold + Viagra = OG Dick\nOG Dick + Iodine = Thick McLovin",
+        "effects": "Jennerising\nElectrifying\nTropic thunder\nLong faced",
+        "notes": "super addictive (100%)\nvery high fair price ($435)",
+        "id": "df06c95321124088cd13f8b67fd5931a367b2a10168723b353df5b5510b59f1e7fb70ab6136157481c0f92bdd25ab3a8d6313d37c31e332aae3a34ff8c238ecb"
+    },
+    "Purple Slime": {
+        "ingredients": "Cocaine\nAddy\nHorse Semen\nViagra\nIodine\nBattery",
+        "instructions": "Cocaine + Addy = Gorilla Splooge\nGorilla Splooge + Horse Semen = Girl Scout Gold\nGirl Scout Gold + Viagra = OG Dick\nOG Dick + Iodine = Thick McLovin\nThick McLovin + Battery = Purple Slime",
+        "effects": "Euphoric\nJennerising\nLong faced\nBright-eyed\nTropic thunder",
+        "notes": "super addictive (100%)\nvery high fair price ($447)",
+        "id": "36e51fb872185f1b56820e724a8669c88a5ff704f492b2cb3a04dd681e6603c445a0d939e5d351e6e49913c2b39522cac68a935585c9f935944cd5a6f208fdee"
+    },
+    "Death Stink": {
+        "ingredients": "Cocaine\nAddy\nHorse Semen\nViagra\nIodine\n2x Battery",
+        "instructions": "Cocaine + Addy = Gorilla Splooge\nGorilla Splooge + Horse Semen = Girl Scout Gold\nGirl Scout Gold + Viagra = OG Dick\nOG Dick + Iodine = Thick McLovin\nThick McLovin + Battery = Purple Slime\nPurple Slime + Battery = Death Stink",
+        "effects": "Bright-eyed\nJennerising\nTropic thunder\nLong faced\nZombifying",
+        "notes": "super addictive (100%)\nextremly high fair price ($507)",
+        "id": "46aabf87aa8f066e57f0b16d9c87046538a23f6986af97b34f09fa949fe1a752da239956fc499d8a32f744bd73f6b6779ba5da539ecb18eaa185973832fd8cd7"
     }
 }
