@@ -7,10 +7,18 @@ def show_customer_list_window(root):
     customer_window.title("Customer List")
     customer_window.geometry("625x500")
 
-    # Keep references to images to prevent garbage collection
     image_refs = []
 
-    # Scrollable canvas setup
+    # --- Search Bar ---
+    search_frame = Frame(customer_window)
+    search_frame.pack(fill=X, padx=10, pady=5)
+    search_label = Label(search_frame, text="Search:", font=("Arial", 10))
+    search_label.pack(side=LEFT, padx=5)
+    search_var = StringVar()
+    search_entry = Entry(search_frame, font=("Arial", 10), textvariable=search_var)
+    search_entry.pack(side=LEFT, fill=X, expand=True, padx=5)
+
+    # --- Scrollable Canvas Setup ---
     canvas = Canvas(customer_window)
     scrollbar = Scrollbar(customer_window, orient=VERTICAL, command=canvas.yview)
     scrollable_frame = Frame(canvas)
@@ -25,7 +33,7 @@ def show_customer_list_window(root):
     canvas.pack(side=LEFT, fill=BOTH, expand=True)
     scrollbar.pack(side=RIGHT, fill=Y)
 
-    for customer in customers:
+    def add_customer_box(customer):
         frame = Frame(scrollable_frame, borderwidth=2, relief="solid", padx=10, pady=5)
         frame.pack(fill=X, pady=8, padx=8)
 
@@ -34,9 +42,9 @@ def show_customer_list_window(root):
         if os.path.exists(img_path):
             try:
                 if customer.name == "Carl Bundy":
-                    photo = PhotoImage(file=img_path)  # Do not subsample for Carl Bundy
+                    photo = PhotoImage(file=img_path)
                 else:
-                    photo = PhotoImage(file=img_path).subsample(5, 5)  # Make others 2x smaller
+                    photo = PhotoImage(file=img_path).subsample(5, 5)
             except Exception:
                 photo = None
         else:
@@ -44,11 +52,10 @@ def show_customer_list_window(root):
 
         if photo:
             img_label = Label(frame, image=photo)
-            img_label.image = photo  # Keep reference
+            img_label.image = photo
             img_label.grid(row=0, column=0, rowspan=5, sticky="nw", padx=(0,10), pady=2)
             image_refs.append(photo)
         else:
-            # If image not found, just leave space
             img_label = Label(frame, width=64, height=64)
             img_label.grid(row=0, column=0, rowspan=5, sticky="nw", padx=(0,10), pady=2)
 
@@ -72,3 +79,22 @@ def show_customer_list_window(root):
 
         spend_label = Label(frame, text=f"Spend Range: ${customer.min_spend} - ${customer.max_spend}", font=("Arial", 10))
         spend_label.grid(row=4, column=1, sticky="w")
+
+    # Add all customers initially
+    for customer in customers:
+        add_customer_box(customer)
+
+    # --- Search Functionality ---
+    def on_search_change(*args):
+        search_term = search_var.get().lower()
+        # Clear the current list
+        for widget in scrollable_frame.winfo_children():
+            widget.destroy()
+        # Add customers that match the search term
+        for customer in customers:
+            if search_term in customer.name.lower():
+                add_customer_box(customer)
+
+    search_var.trace_add("write", on_search_change)
+
+    customer_window.mainloop()
