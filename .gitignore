@@ -1,2 +1,16 @@
-*.bup
+# Environment variables
 *.env
+*.env.*
+
+# Virtual environments
+venv/
+env/
+
+# Backup files
+*.bup
+
+# python cache
+__pycache__/
+
+# VS Code
+.vscode/
