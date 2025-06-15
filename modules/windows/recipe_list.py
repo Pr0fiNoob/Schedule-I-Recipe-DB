@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
-from edit_recipe import show_edit_recipe_window
-from helpers import EFFECTS, format_effects, save_recipe
+from modules.windows.edit_recipe import show_edit_recipe_window
+from modules.helpers import EFFECTS, format_effects, save_recipe
 import json
 
 def show_recipe_list_window(root):
@@ -24,9 +24,12 @@ def show_recipe_list_window(root):
             if name_matches and effect_matches:
                 add_recipe_to_frame(recipe_name, recipe)
 
-    def update_selected_effects(effects):
+    def on_effect_select(event=None):
+        # Get selected effects from the Listbox
+        selection = effect_listbox.curselection()
+        effects = [EFFECTS[i] for i in selection]
         nonlocal selected_effects
-        selected_effects = effects
+        selected_effects = [e.lower() for e in effects]
         search_recipes()
 
     def add_recipe_to_frame(recipe_name, recipe):
@@ -95,21 +98,33 @@ def show_recipe_list_window(root):
 
     recipe_window = Toplevel(root)
     recipe_window.title("Recipe List")
-    recipe_window.geometry("600x450")
+    recipe_window.geometry("740x600")
 
-    search_frame = Frame(recipe_window)
-    search_frame.pack(fill=X, padx=10, pady=5)
-    
-    search_label = Label(search_frame, text="Search:", font=("Arial", 10))
+    # Top frame for search and filter
+    top_frame = Frame(recipe_window)
+    top_frame.pack(fill=X, padx=10, pady=5)
+
+    search_label = Label(top_frame, text="Search:", font=("Arial", 10))
     search_label.pack(side=LEFT, padx=5)
-    
-    search_entry = Entry(search_frame, font=("Arial", 10))
-    search_entry.pack(side=LEFT, fill=X, expand=True, padx=5)
-    
-    # You can add effect filter button here if you want
 
+    search_entry = Entry(top_frame, font=("Arial", 10))
+    search_entry.pack(side=LEFT, fill=X, expand=True, padx=5)
     search_entry.bind('<KeyRelease>', search_recipes)
 
+    # Effect filter Listbox
+    effect_filter_frame = Frame(recipe_window)
+    effect_filter_frame.pack(fill=Y, side=LEFT, padx=10, pady=5, anchor="n")
+
+    effect_label = Label(effect_filter_frame, text="Filter by Effect:", font=("Arial", 10, "bold"))
+    effect_label.pack(anchor="w")
+
+    effect_listbox = Listbox(effect_filter_frame, selectmode=MULTIPLE, height=15, exportselection=False)
+    for effect in EFFECTS:
+        effect_listbox.insert(END, effect)
+    effect_listbox.pack(fill=Y, expand=True)
+    effect_listbox.bind('<<ListboxSelect>>', on_effect_select)
+
+    # Canvas and scrollbar for recipes
     canvas = Canvas(recipe_window)
     scrollbar = Scrollbar(recipe_window, orient=VERTICAL, command=canvas.yview)
     scrollable_frame = Frame(canvas)
