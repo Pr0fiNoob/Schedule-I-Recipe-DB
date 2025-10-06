@@ -36,10 +36,10 @@
     },
     "Stinky Cake": {
         "ingredients": "Sour Diesel\nParacetamol\nGasoline",
-        "instructions": "Sour Diesel + Paracetamol = Ultra Slime\nUltra Slime + Gasoline = Stinky Cake\n\nAdditional notes:\nvery addictive (95%)",
-        "effects": "",
-        "notes": "",
-        "id": "72c97de79cedddc31b527727da2ae342c90cdb4653f5e8acb72dc5afb592e7c65adba113e7281d8c480b30e327c3205d18fd263d14b0c5dc89a0fcb2fbdd62cd"
+        "instructions": "Sour Diesel + Paracetamol = Ultra Slime\nUltra Slime + Gasoline = Stinky Cake",
+        "effects": "Refreshing\nTropic thunder\nToxic",
+        "notes": "very addictive (95%)",
+        "id": "fa8a89d8ebcc1b46e4f43ab9b32f65120d95a0dd2cd84b5321094eededbb4c37bfcb17e50366af5a13187fd5c45e5bbf25f8d3dfad8e203d1b7c8cc8631fc429"
     },
     "Nightmare Ass": {
         "ingredients": "Og Kush\nViagra\nBanana\nEnergy Drink",
@@ -306,5 +306,40 @@
         "effects": "Bright-eyed\nJennerising\nTropic thunder\nLong faced\nZombifying",
         "notes": "super addictive (100%)\nextremly high fair price ($507)",
         "id": "46aabf87aa8f066e57f0b16d9c87046538a23f6986af97b34f09fa949fe1a752da239956fc499d8a32f744bd73f6b6779ba5da539ecb18eaa185973832fd8cd7"
+    },
+    "Banana McLovin": {
+        "ingredients": "Cocaine\nBanana",
+        "instructions": "Cocaine + Banana = Banana McLovin",
+        "effects": "Gingeritis",
+        "notes": "",
+        "id": "4ef71a4144c2a65f2263f2526b1bd2ba0ebfe8fe4dc5cab5e76f0b0554512956d6b9b6ea875d4c9b118eb0aeb2a49a70fb142ccab9af2a5c65e4552daafa2e8e"
+    },
+    "Island Haze": {
+        "ingredients": "Cocaine\nBanana\nCuke",
+        "instructions": "Cocaine + Banana = Banana McLovin\nBanana McLovin + Cuke = Island Haze",
+        "effects": "Energizing\nThought-provoking",
+        "notes": "super addictive (100%)",
+        "id": "ae473dab3523427a788e8c63b3d63c479c99520722f25f2ef4040688d78bdda6b745177fad16a2244007ea29693147e4a0a351cc870bedcce34464b298c04fd8"
+    },
+    "Granddaddy McLovin": {
+        "ingredients": "Cocaine\nBanana\nCuke\nHorse Semen",
+        "instructions": "Cocaine + Banana = Banana McLovin\nBanana McLovin + Cuke = Island Haze\nIsland Haze + Horse Semen = Granddaddy McLovin",
+        "effects": "Energizing\nElectrifying\nLong faced",
+        "notes": "super addictive (100%)\nhigh fair price ($336)",
+        "id": "3f209e72bd303d188815eb524db2d684b22c63dabe321f0a345e86583f34e23bac01858cdbb34bad75b58fb5300cc0ba3168bfd279d8eca235b7ebc1c451cf0c"
+    },
+    "California Ghost": {
+        "ingredients": "Cocaine\nBanana\nCuke\nHorse Semen\nMega Bean",
+        "instructions": "Cocaine + Banana = Banana McLovin\nBanana McLovin + Cuke = Island Haze\nIsland Haze + Horse Semen = Granddaddy McLovin\nGranddaddy McLovin + Mega Bean = California Ghost",
+        "effects": "Foggy\nElectrifying\nLong faced\nCyclopean",
+        "notes": "super addictive (100%)\nvery high fair price ($441)",
+        "id": "28af149f45537e8be61ceda75714f2af062bb63f1c363c0da9b55361b1929784ae25d58d627f7a5c9ebcf276e72b0a9d80e4579b6958ad4549a76a36bc53ec0b"
+    },
+    "Fat Diesel": {
+        "ingredients": "Sour Diesel\nIodine",
+        "instructions": "Sour Diesel + Iodine = Fat Diesel",
+        "effects": "Thought-provoking\nJennerising",
+        "notes": "",
+        "id": "ef9be1504151596eb1ebf423349aa74f7d52a37a960a2edf44997b101052b44ae88f3c8616ee531132c70a63e5e59f5fa539fc681f6c327a63f28c5bf097edc7"
     }
 }
