@@ -62,7 +62,7 @@ EFFECTS = [
     "Munchies",
     "Paranoia",
     "Refreshing",
-    "schizophrenia",
+    "Schizophrenia",
     "Sedating",
     "Seizure-Inducing",
     "Shrinking",

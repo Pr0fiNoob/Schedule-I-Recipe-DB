@@ -98,7 +98,7 @@ def show_recipe_list_window(root):
 
     recipe_window = Toplevel(root)
     recipe_window.title("Recipe List")
-    recipe_window.geometry("740x600")
+    recipe_window.geometry("740x615")
 
     # Top frame for search and filter
     top_frame = Frame(recipe_window)
