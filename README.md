@@ -55,8 +55,8 @@ This project is for educational and entertainment purposes only.
 All recipes and customer data are fictional and part of the game "Schedule I" made by TVGS (Tylers Video Game Studio).
 
 ## Sources
-- Recipe Data has been collected by contributors either by trial and error or using schedule1-calculator.com
-- Customer Data is entirely from schedule-1.fandom.com/wiki/Customers
+- Recipe Data has been collected by contributors either by trial and error or using [Schedule I Calculator](schedule1-calculator.com)
+- Customer Data is entirely from [Schedule I Wiki](schedule-1.fandom.com/wiki/Customers)
 
 
 ## License
